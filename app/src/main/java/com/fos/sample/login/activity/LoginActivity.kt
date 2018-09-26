@@ -7,10 +7,11 @@ import android.os.Bundle
 import android.view.View
 import com.fos.fosmvp.common.base.BaseActivity
 import com.fos.fosmvp.common.base.BaseResponse
-import com.fos.fosmvp.common.utils.LogUtils
 import com.fos.fosmvp.common.utils.ToastUtils
 import com.fos.sample.R
+import com.fos.sample.baidu.ActivityMain
 import com.fos.sample.entity.login.UserEntity
+import com.fos.sample.kdxf.voicedemo.MainActivity
 import com.fos.sample.ui.login.contract.LoginContract
 import com.fos.sample.ui.login.model.LoginModel
 import com.fos.sample.ui.login.presenter.LoginPresenter
@@ -32,22 +33,24 @@ class LoginActivity : BaseActivity<LoginPresenter, LoginModel>(), LoginContract.
     }
 
     override fun initView(savedInstanceState: Bundle?) {
-        btn_user_login.setOnClickListener(this)
+        button1.setOnClickListener(this)
+        button2.setOnClickListener(this)
+        button3.setOnClickListener(this)
+        button4.setOnClickListener(this)
     }
 
     override fun onClick(view: View) {
         when (view?.id) {
-            R.id.btn_user_login -> login()
+            R.id.button1 -> startActivity(Intent(LoginActivity@this, MainActivity::class.java))
+            R.id.button2 -> startActivity(Intent(LoginActivity@this, ActivityMain::class.java))
+            R.id.button3 -> ToastUtils.showShort("不提供Android SDK")
+            R.id.button4 -> ToastUtils.showShort("不提供Android SDK")
         }
     }
 
 
     fun login() {
-        tel = edt_login_phone.text.toString().trim()
-        password = edt_login_password.text.toString().trim()
-        LogUtils.e("tel= "+tel)
-        ToastUtils.showShort("登录")
-        mPresenter!!.getLoginRequest(tel, password)
+
     }
 
     override fun returnLoginSucceed(userEntity: UserEntity) {

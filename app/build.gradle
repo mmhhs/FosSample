@@ -26,6 +26,10 @@ android {
             jniLibs.srcDirs = ['libs']
         }
     }
+    packagingOptions{
+        doNotStrip "*/*/libvad.dnn.so"
+        doNotStrip "*/*/libbd_easr_s1_merge_normal_20151216.dat.so"
+    }
 }
 
 dependencies {
@@ -33,5 +37,7 @@ dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
     compile 'com.android.support:appcompat-v7:26.0.2'
     compile 'com.fos:fosmvp:1.0'
-
+    implementation project(':core')
+    implementation project(':uiasr')
+    implementation project(':uidialog')
 }
