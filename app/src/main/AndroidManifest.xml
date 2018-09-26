@@ -241,6 +241,12 @@
                     android:name="com.baidu.speech.recognizerdemo.intent.category.SAMPLE_CODE"/>
             </intent-filter>
         </activity>
+        <activity android:name=".ali.ALiMainActivity"></activity>
+        <activity android:name=".ali.SpeechRecognizerActivity"></activity>
+        <activity android:name=".ali.SpeechRecognizerWithRecorderActivity"></activity>
+        <activity android:name=".ali.SpeechTranscriberActivity"></activity>
+        <activity android:name=".ali.SpeechTranscriberWithRecorderActivity"></activity>
+        <activity android:name=".ali.SpeechSynthesizerActivity"></activity>
     </application>
 
 

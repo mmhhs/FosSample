@@ -40,4 +40,9 @@ dependencies {
     implementation project(':core')
     implementation project(':uiasr')
     implementation project(':uidialog')
+    implementation 'com.alibaba:fastjson:1.1.56.android'
+    implementation 'com.android.support:design:26.1.0'
+//    compile(name:'nlssdk', ext:'aar')
+    implementation fileTree(dir: 'libs', include: ['*.aar'])
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
 }
