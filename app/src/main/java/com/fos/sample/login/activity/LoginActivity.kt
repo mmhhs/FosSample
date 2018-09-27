@@ -13,6 +13,7 @@ import com.fos.sample.ali.ALiMainActivity
 import com.fos.sample.baidu.ActivityMain
 import com.fos.sample.entity.login.UserEntity
 import com.fos.sample.kdxf.voicedemo.MainActivity
+import com.fos.sample.tx.TxLoginActivity
 import com.fos.sample.ui.login.contract.LoginContract
 import com.fos.sample.ui.login.model.LoginModel
 import com.fos.sample.ui.login.presenter.LoginPresenter
@@ -45,7 +46,7 @@ class LoginActivity : BaseActivity<LoginPresenter, LoginModel>(), LoginContract.
             R.id.button1 -> startActivity(Intent(LoginActivity@this, MainActivity::class.java))
             R.id.button2 -> startActivity(Intent(LoginActivity@this, ActivityMain::class.java))
             R.id.button3 -> startActivity(Intent(LoginActivity@this, ALiMainActivity::class.java))
-//            R.id.button4 -> ToastUtils.showShort("不提供Android SDK")
+            R.id.button4 -> startActivity(Intent(LoginActivity@this, TxLoginActivity::class.java))
         }
     }
 

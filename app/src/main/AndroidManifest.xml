@@ -247,6 +247,8 @@
         <activity android:name=".ali.SpeechTranscriberActivity"></activity>
         <activity android:name=".ali.SpeechTranscriberWithRecorderActivity"></activity>
         <activity android:name=".ali.SpeechSynthesizerActivity"></activity>
+        <activity android:name=".tx.TxLoginActivity"></activity>
+        <activity android:name=".tx.TxMainActivity"></activity>
     </application>
 
 
