@@ -22,4 +22,11 @@
     <style name="textStyle">
         <item name="android:textSize">16sp</item>
     </style>
+
+    <!-- 白色背景主题 -->
+    <style name="base_background_white">
+        <item name="android:background">@color/white</item>
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:clipToPadding">true</item>
+    </style>
 </resources>

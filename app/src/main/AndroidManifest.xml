@@ -41,18 +41,18 @@
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.VIEW" />-->
 
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
+                <!--<category android:name="android.intent.category.DEFAULT" />-->
+                <!--<category android:name="android.intent.category.BROWSABLE" />-->
 
-                <data android:scheme="almighty" />
-            </intent-filter>
+                <!--<data android:scheme="almighty" />-->
+            <!--</intent-filter>-->
         </activity>
         <activity android:name=".kdxf.voicedemo.MainActivity" />
         <activity android:name=".kdxf.speech.setting.TtsSettings" >
@@ -249,6 +249,23 @@
         <activity android:name=".ali.SpeechSynthesizerActivity"></activity>
         <activity android:name=".tx.TxLoginActivity"></activity>
         <activity android:name=".tx.TxMainActivity"></activity>
+        <activity android:name=".webview.activity.WebViewActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="almighty" />
+            </intent-filter>
+        </activity>
     </application>
 
 
