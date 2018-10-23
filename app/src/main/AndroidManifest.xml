@@ -27,6 +27,50 @@
     <!--如需使用人脸识别，还要添加：摄相头权限，拍照需要用到 -->
     <uses-permission android:name="android.permission.CAMERA" />
 
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_UPDATES" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <!-- 富媒体需要声明的权限 -->
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
+    //简单配置即可
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="com.android.launcher.permission.WRITE_SYNC_SETTINGS" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SYNC_SETTINGS" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS_PRIVILEGED" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.BIND_JOB_SERVICE" />
+    <uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:name=".api.AppApplication"
         android:allowBackup="true"
@@ -54,71 +98,9 @@
                 <!--<data android:scheme="almighty" />-->
             <!--</intent-filter>-->
         </activity>
-        <activity android:name=".kdxf.voicedemo.MainActivity" />
-        <activity android:name=".kdxf.speech.setting.TtsSettings" >
-        </activity>
-        <activity android:name=".kdxf.speech.setting.IatSettings" >
-        </activity>
-        <activity
-            android:name=".kdxf.voicedemo.IatDemo"
-            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|fontScale"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
-            android:name=".kdxf.voicedemo.AsrDemo"
-            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|fontScale"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
-            android:name=".kdxf.voicedemo.TtsDemo"
-            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|fontScale"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
-            android:name=".kdxf.voicedemo.IseDemo"
-            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|fontScale"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
-            android:name=".kdxf.voicedemo.vocalverify.VocalVerifyDemo"
-            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|fontScale"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
-            android:name=".kdxf.voicedemo.faceonline.OnlineFaceDemo"
-            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|fontScale"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
-            android:name=".kdxf.voicedemo.IdentifyGroup.GroupManagerActivity"
-            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|fontScale"
-            android:screenOrientation="portrait">
-        </activity>
-        <activity
-            android:name=".kdxf.voicedemo.IdentifyGroup.FaceIdentifyActivity"
-            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|fontScale"
-            android:screenOrientation="portrait">
-        </activity>
-        <activity
-            android:name=".kdxf.voicedemo.IdentifyGroup.VocalIdentifyActivity"
-            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|fontScale"
-            android:screenOrientation="portrait">
-        </activity>
-        <activity
-            android:name=".kdxf.voicedemo.IdentifyGroup.ResultIdentifyActivity"
-            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|fontScale"
-            android:screenOrientation="portrait">
-        </activity>
-        <activity
-            android:name=".kdxf.speech.setting.IseSettings"
-            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|fontScale"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
-            android:name=".kdxf.speech.setting.UrlSettings"
-            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|fontScale"
-            android:screenOrientation="portrait" >
-        </activity>
+
+
+
         <!-- 移动统计分析 -->
         <meta-data
             android:name="IFLYTEK_APPKEY"
@@ -128,127 +110,7 @@
             android:value="Android_Demo" />
 
 
-        <activity
-            android:name=".baidu.ActivityMain"
-            android:configChanges="orientation|keyboardHidden|screenLayout"
-            android:label="在线识别"
-            android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category
-                    android:name="com.baidu.speech.recognizerdemo.intent.category.SAMPLE_CODE"/>
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".baidu.recog.ActivityOnlineRecog"
-            android:configChanges="orientation|keyboardHidden|screenLayout"
-            android:label="在线识别"
-            android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category
-                    android:name="com.baidu.speech.recognizerdemo.intent.category.SAMPLE_CODE"/>
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".baidu.recog.ActivityOfflineRecog"
-            android:configChanges="orientation|keyboardHidden|screenLayout"
-            android:label="离线命令词"
-            android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category
-                    android:name="com.baidu.speech.recognizerdemo.intent.category.SAMPLE_CODE"/>
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".baidu.recog.ActivityNlu"
-            android:configChanges="orientation|keyboardHidden|screenLayout"
-            android:label="在线和本地语义"
-            android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category
-                    android:name="com.baidu.speech.recognizerdemo.intent.category.SAMPLE_CODE"/>
-            </intent-filter>
-        </activity>
 
-        <activity
-            android:name=".baidu.recog.ActivityAllRecog"
-            android:configChanges="orientation|keyboardHidden|screenLayout"
-            android:label="全部识别"
-            android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category
-                    android:name="com.baidu.speech.recognizerdemo.intent.category.SAMPLE_CODE"/>
-            </intent-filter>
-        </activity>
-
-        <activity
-            android:name=".baidu.recog.ActivityUiDialog"
-            android:configChanges="orientation|keyboardHidden|screenLayout"
-            android:label="在线识别（带对话框界面）"
-            android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category
-                    android:name="com.baidu.speech.recognizerdemo.intent.category.SAMPLE_CODE"/>
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".baidu.mini.ActivityMyMiniRecog"
-            android:configChanges="orientation|keyboardHidden|screenLayout"
-            android:label="精简版识别"
-            android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category
-                    android:name="com.baidu.speech.recognizerdemo.intent.category.SAMPLE_CODE"/>
-            </intent-filter>
-        </activity>
-
-        <activity
-            android:name=".baidu.wakeup.ActivityWakeUp"
-            android:configChanges="orientation|keyboardHidden|screenLayout"
-            android:label="唤醒词"
-            android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category
-                    android:name="com.baidu.speech.recognizerdemo.intent.category.SAMPLE_CODE"/>
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".baidu.wakeup.ActivityWakeUpRecog"
-            android:configChanges="orientation|keyboardHidden|screenLayout"
-            android:label="唤醒后识别"
-            android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category
-                    android:name="com.baidu.speech.recognizerdemo.intent.category.SAMPLE_CODE"/>
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".baidu.mini.ActivityMyMiniWakeUp"
-            android:configChanges="orientation|keyboardHidden|screenLayout"
-            android:label="精简版唤醒"
-            android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category
-                    android:name="com.baidu.speech.recognizerdemo.intent.category.SAMPLE_CODE"/>
-            </intent-filter>
-        </activity>
-        <activity android:name=".ali.ALiMainActivity"></activity>
-        <activity android:name=".ali.SpeechRecognizerActivity"></activity>
-        <activity android:name=".ali.SpeechRecognizerWithRecorderActivity"></activity>
-        <activity android:name=".ali.SpeechTranscriberActivity"></activity>
-        <activity android:name=".ali.SpeechTranscriberWithRecorderActivity"></activity>
-        <activity android:name=".ali.SpeechSynthesizerActivity"></activity>
-        <activity android:name=".tx.TxLoginActivity"></activity>
-        <activity android:name=".tx.TxMainActivity"></activity>
         <activity android:name=".webview.activity.WebViewActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="portrait"

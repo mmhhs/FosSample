@@ -7,6 +7,7 @@ import android.net.Uri;
 import android.net.http.SslError;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.GeolocationPermissions;
@@ -19,7 +20,6 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
 
-import com.baidu.speech.utils.LogUtil;
 import com.fos.fosmvp.common.base.BaseActivity;
 import com.fos.sample.R;
 import com.uuzuche.lib_zxing.activity.CaptureActivity;
@@ -33,7 +33,7 @@ public class WebViewActivity extends BaseActivity {
     WebView webView;
     ProgressBar progressBar;//进度条
     private boolean isExit = false;
-    private String path = "https://wms.foton.com.cn/rf";
+    private String path = "file:///android_asset/test.html";//file:///android_asset/test.html     https://wms.foton.com.cn/rf
 
     @Override
     public int getLayoutId() {
@@ -48,7 +48,7 @@ public class WebViewActivity extends BaseActivity {
     @Override
     public void initView(Bundle savedInstanceState) {
 
-
+        bindView();
 
 
         initWebView();//初始化webview
@@ -190,7 +190,7 @@ public class WebViewActivity extends BaseActivity {
         }
         //在点击请求的是链接是才会调用，重写此方法返回true表明点击网页里面的链接还是在当前的webview里跳转，不跳到浏览器那边
         public boolean shouldOverrideUrlLoading(WebView view, String url) {
-            LogUtil.e("current url is " + url);
+
             if (url.startsWith("http:") || url.startsWith("https:")) {
                 return false;
             }
@@ -234,7 +234,7 @@ public class WebViewActivity extends BaseActivity {
     @JavascriptInterface
     public void jumpClick(String androidClassName) {
         try {
-            LogUtil.e("androidClassName= "+androidClassName);
+
             Intent intent = new Intent(this,Class.forName(androidClassName));
             startActivity(intent);
         } catch (ClassNotFoundException e) {
@@ -246,14 +246,17 @@ public class WebViewActivity extends BaseActivity {
     @JavascriptInterface
     public void qrClick() {
         try {
-            Intent intent = new Intent(WebViewActivity.this, CaptureActivity.class);
-            startActivityForResult(intent, 11);
+            if (PermissionUtil.hasFilePermission(this, true) && PermissionUtil.hasCameraPermission(this, true)) {
+                Intent intent = new Intent(WebViewActivity.this, CaptureActivity.class);
+                startActivityForResult(intent, 11);
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     private void jsFun(String v){
+        Log.e("vvv","vvvv= "+v);
         if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.JELLY_BEAN_MR2) {
             webView.loadUrl("javascript:callJS("+v+")");
         } else {
@@ -282,6 +285,7 @@ public class WebViewActivity extends BaseActivity {
                         }
                         if (bundle.getInt(CodeUtils.RESULT_TYPE) == CodeUtils.RESULT_SUCCESS) {
                             String result = bundle.getString(CodeUtils.RESULT_STRING);
+
                             jsFun(result);
                         } else if (bundle.getInt(CodeUtils.RESULT_TYPE) == CodeUtils.RESULT_FAILED) {
 

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:id="@+id/popup_dialog_list_container_layout">
+    <LinearLayout
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="@drawable/popup_bg_white">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="118.5dp"
+                android:src="@drawable/tip_dialog"
+                android:scaleType="fitXY"
+                android:id="@+id/popup_dialog_header_img"
+                android:visibility="visible"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_white"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/base_view_dialog_list_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="切换车辆"
+                    android:textColor="@color/text_black"
+                    android:textSize="16sp"
+                    android:visibility="visible" />
+                <ListView
+                    android:id="@+id/popup_dialog_list_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:cacheColorHint="@android:color/transparent"
+                    android:divider="@color/popup_line_color"
+                    android:dividerHeight="0.4dp"
+                    android:gravity="center"
+                    android:listSelector="@drawable/popup_selector_bg" />
+
+                <TextView
+                    android:id="@+id/txt_add_car"
+                    style="@style/base_text_grey_deep_14"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/base_view_add_engine_id_shape_orgine"
+                    android:gravity="center"
+                    android:text="添加车辆"
+                    android:textColor="@color/text_white" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

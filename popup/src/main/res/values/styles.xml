@@ -1,0 +1,80 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+    <style name="base_text_black_18">
+        <item name="android:textColor">@color/text_black</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    <style name="base_text_black_14">
+        <item name="android:textColor">@color/text_black</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="base_text_orange_15">
+        <item name="android:textColor">@color/button_orange_deep</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+    <style name="base_text_orange_code">
+    <item name="android:textColor">@color/button_extend</item>
+    <item name="android:textSize">15sp</item>
+</style>
+    <style name="base_text_orange_30">
+        <item name="android:textColor">@color/button_orange_deep</item>
+        <item name="android:textSize">30sp</item>
+    </style>
+    <style name="base_text_black_12">
+        <item name="android:textColor">@color/text_black</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="base_text_grey_deep_14">
+        <item name="android:textColor">@color/text_grey_deep</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="base_text_blue_12">
+        <item name="android:textColor">@color/text_blue</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="base_text_blue_11">
+        <item name="android:textColor">@color/text_blue</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+    <style name="ft_button_orange">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:layout_marginRight">15dp</item>
+        <item name="android:textColor">@color/text_white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:background">@drawable/ft_button_orange</item>
+    </style>
+
+    <style name="GridPasswordView" />
+
+    <style name="GridPasswordView.TextView">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="base_line_grey_horizontal">
+        <item name="android:background">@color/line_color</item>
+        <item name="android:layout_height">0.1dp</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+    <style name="GridPasswordView.EditText" parent="GridPasswordView.TextView">
+        <item name="android:cursorVisible">false</item>
+    </style>
+
+    <style name="GridPasswordView.Divider">
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginTop">1dp</item>
+        <item name="android:layout_marginBottom">1dp</item>
+    </style>
+
+</resources>

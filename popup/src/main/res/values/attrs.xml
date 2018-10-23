@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="gridPasswordView">
+
+        <attr name="textColors" format="color|reference" />
+        <attr name="textSizes" format="dimension" />
+        <attr name="lineColor" format="color" />
+        <attr name="gridColor" format="color" />
+        <attr name="lineWidth" format="dimension" />
+
+        <attr name="passwordLength" format="integer" />
+        <attr name="passwordTransformation" format="string" />
+
+        <attr name="passwordType" format="enum">
+            <enum name="numberPassword" value="0" />
+            <enum name="textPassword" value="1" />
+            <enum name="textVisiblePassword" value="2" />
+            <enum name="textWebPassword" value="3" />
+        </attr>
+
+    </declare-styleable>
+
+
+    <declare-styleable name="CircleView">
+        <attr name="progresscolor" format="reference|color" /> <!-- 进度条的颜色 -->
+        <attr name="textcolor" format="reference|color" /> <!-- 数字颜色 -->
+    </declare-styleable>
+</resources>

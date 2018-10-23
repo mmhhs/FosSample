@@ -1,1 +1,1 @@
-include ':app', ':core', ':uiasr', ':uidialog'
+include ':app', ':picture', ':popup', ':picker'

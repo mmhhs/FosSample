@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+       android:shape="rectangle">
+
+    <corners android:radius="20dp" /><!-- 设置圆角半径 -->
+
+    <!-- 大小 -->
+    <!--<size-->
+    <!--android:width="25dp"-->
+    <!--android:height="16dp" />-->
+    <!-- 宽度和高度 -->
+
+    <!-- 填充 -->
+    <!--<solid android:color="#fff" />&lt;!&ndash; 填充的颜色 &ndash;&gt;-->
+
+    <!-- 描边 -->
+    <stroke
+        android:width="1dp"
+        android:color="#CCCDCE"
+        android:dashWidth="1dp" />
+
+    <padding
+        android:bottom="5dp"
+        android:left="5dp"
+        android:right="5dp"
+        android:top="5dp" />
+
+</shape>

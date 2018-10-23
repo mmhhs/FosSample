@@ -9,14 +9,13 @@ import com.fos.fosmvp.common.base.BaseActivity
 import com.fos.fosmvp.common.base.BaseResponse
 import com.fos.fosmvp.common.utils.ToastUtils
 import com.fos.sample.R
-import com.fos.sample.ali.ALiMainActivity
-import com.fos.sample.baidu.ActivityMain
+
 import com.fos.sample.entity.login.UserEntity
-import com.fos.sample.kdxf.voicedemo.MainActivity
-import com.fos.sample.tx.TxLoginActivity
+
 import com.fos.sample.ui.login.contract.LoginContract
 import com.fos.sample.ui.login.model.LoginModel
 import com.fos.sample.ui.login.presenter.LoginPresenter
+import com.fos.sample.webview.activity.WebViewActivity
 import kotlinx.android.synthetic.main.activity_login.*
 
 /**
@@ -42,12 +41,7 @@ class LoginActivity : BaseActivity<LoginPresenter, LoginModel>(), LoginContract.
     }
 
     override fun onClick(view: View) {
-        when (view?.id) {
-            R.id.button1 -> startActivity(Intent(LoginActivity@this, MainActivity::class.java))
-            R.id.button2 -> startActivity(Intent(LoginActivity@this, ActivityMain::class.java))
-            R.id.button3 -> startActivity(Intent(LoginActivity@this, ALiMainActivity::class.java))
-            R.id.button4 -> startActivity(Intent(LoginActivity@this, TxLoginActivity::class.java))
-        }
+        WebViewActivity.startAction(this)
     }
 
 

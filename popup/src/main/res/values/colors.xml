@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="popup_transparent">#70000000</color>
+    <color name="popup_line_color">#e6e6e6</color>
+    <color name="popup_black">#000000</color>
+    <color name="popup_deep_grey">#484848</color>
+    <color name="popup_red">#e73706</color>
+    <color name="popup_selector_on">#ffffff</color>
+    <color name="popup_selector_off">#d9d7d7</color>
+    <color name="popup_white">#ffffff</color>
+    <color name="popup_light_grey">#eeeeee</color>
+    <color name="transparent">#60000000</color>
+    <color name="text_black">#333333</color>
+    <color name="line_color">#dddddd</color>
+    <color name="text_grey_deep">#666666</color>
+    <color name="text_blue">#2996ff</color>
+    <color name="text_white">#f2f7fe</color>
+    <color name="button_orange">#ff7814</color>
+    <color name="button_orange_deep">#e16001</color>
+    <color name="button_extend">#ffd55f</color>
+    <color name="white">#ffffff</color>
+    <color name="bg_white">#ffffff</color>
+    <!--selector-->
+    <color name="selector_on">#ffffff</color>
+    <color name="selector_off">#d9d7d7</color>
+</resources>

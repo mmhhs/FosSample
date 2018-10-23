@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+		<link rel="shortcut icon" href="/favicon.ico">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	</head>
+
+	<body>
+	<input type="search" id='search_value' placeholder='' />
+	<button onclick="qrClick()">调用QR</button>
+
+		<script type='text/javascript'>
+
+			function qrClick() {
+				nativeMethod.qrClick();
+			}
+
+			function callJS(v) {
+				document.getElementById("search_value").value=""+v;
+			}
+
+		</script>
+
+	</body>
+
+</html>

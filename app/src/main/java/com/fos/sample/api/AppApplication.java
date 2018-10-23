@@ -3,8 +3,7 @@ package com.fos.sample.api;
 
 import android.app.Application;
 
-import com.iflytek.cloud.SpeechConstant;
-import com.iflytek.cloud.SpeechUtility;
+import com.uuzuche.lib_zxing.activity.ZXingLibrary;
 
 /**
  * APPLICATION
@@ -24,7 +23,7 @@ public class AppApplication extends Application {
 
 
     private void init() {
-        SpeechUtility.createUtility(appApplication, SpeechConstant.APPID +"=5bab1996");
+        ZXingLibrary.initDisplayOpinion(this);
     }
 
     public AppApplication() {
