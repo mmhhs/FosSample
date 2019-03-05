@@ -1,52 +1,87 @@
 apply plugin: 'com.android.application'
 
-apply plugin: 'kotlin-android'
-
-apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion 26
+    buildToolsVersion "26.0.2"
     defaultConfig {
         applicationId "com.fos.sample"
         minSdkVersion 15
         targetSdkVersion 26
-        versionCode 1
-        versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-    }
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        versionCode 2
+        versionName "1.1"
+        multiDexEnabled true
+        ndk {
+            //选择要添加的对应cpu类型的.so库。
+            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a', 'x86'
+            // 还可以添加 'x86', 'x86_64', 'mips', 'mips64'
         }
     }
-    buildToolsVersion '26.0.2'
+
+    productFlavors {
+    }
+
+
     sourceSets {
         main {
             jniLibs.srcDirs = ['libs']
         }
     }
-    packagingOptions{
-        doNotStrip "*/*/libvad.dnn.so"
-        doNotStrip "*/*/libbd_easr_s1_merge_normal_20151216.dat.so"
+
+    dexOptions {
+        preDexLibraries = false
+        javaMaxHeapSize "2g"
+    }
+
+    signingConfigs {
+        release {
+            keyAlias 'magic'
+            keyPassword 'mmh9526s'
+            storeFile file('/Users/xxjsb/Desktop/dev/key/fos_magic.jks')
+            storePassword 'mmh9526s'
+        }
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.release
+        }
+        release {
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+
+    afterEvaluate {
+        tasks.matching {
+            it.name.startsWith('dex')
+        }.each { dx ->
+            if (dx.additionalParameters == null) {
+                dx.additionalParameters = []
+            }
+            dx.additionalParameters += '--multi-dex' // enable multidex
+        }
     }
 }
 
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
-    compile 'com.fos:fosmvp:1.1.0'
-    implementation project(':core')
-    implementation project(':uiasr')
-    implementation project(':uidialog')
-    implementation 'com.alibaba:fastjson:1.1.56.android'
-    implementation 'com.android.support:design:26.1.0'
-//    compile(name:'nlssdk', ext:'aar')
-    implementation fileTree(dir: 'libs', include: ['*.aar'])
-    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    compile 'com.fos:fosmvp:1.1.1'
+    compile 'com.android.support.constraint:constraint-layout:1.1.0'
 
-    compile 'com.tencent.aai:aai:2.1.2:@aar'
-    compile 'com.squareup.okhttp3:okhttp:3.6.0'
-    compile 'org.slf4j:slf4j-android:1.6.1-RC1'
+
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.jakewharton:butterknife:8.6.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'
 
 }

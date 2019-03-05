@@ -1,19 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <!-- 应用的主要色调 toolbar（actionbar）颜色 -->
+    <color name="colorPrimary">#19ABA8</color>
+    <!-- 应用的主要暗色调，statusBarColor默认使用该颜色 状态栏颜色 -->
+    <color name="colorPrimaryDark">#19ABA8</color>
+    <!-- 状态栏颜色 未使用 -->
+    <color name="statusBarColor">#19ABA8</color>
+    <!-- 窗口背景颜色 -->
+    <color name="windowBackground">#FFFFFF</color>
+    <!-- 底部栏颜色 未使用 -->
+    <color name="navigationBarColor">#FFFFFF</color>
+    <!-- 应用的前景色，ListView的分割线，switch滑动区默认使用该颜色 -->
+    <color name="colorForeground">#FEFEFE</color>
+    <!-- 应用的背景色，popMenu的背景默认使用该颜色 -->
+    <color name="colorBackground">#FEFEFE</color>
+    <!-- CheckBox，RadioButton，SwitchCompat等默认状态的颜色 -->
+    <color name="colorControlNormal">#FEFEFE</color>
+    <!-- CheckBox，RadioButton，SwitchCompat等一般控件的选中效果默认采用该颜色 -->
+    <color name="colorAccent">#19ABA8</color>
+    <!-- 标题颜色 -->
+    <color name="colorTitle">#19ABA8</color>
 
-    <!-- 画面背景色 -->
-    <drawable name="layout_backgroud">#000000</drawable>
 
-    <!-- 分割线背景色 -->
-    <drawable name="line_background">#161823</drawable>
-
+    <!-- 背景颜色 -->
+    <color name="bg_grey">#e7e7e7</color>
     <color name="white">#FFFFFF</color>
+    <color name="translucent">#90000000</color>
+    <color name="grey">#cccccc</color>
 
-    <!-- 控件按下时显示的颜色 -->
-    <color name="list_backgroud_color">#2fb3cb</color>
-    <color name="title_color">#0f8ec5</color>
-    <color name="content_color">#737373</color>
+    <!-- 文本颜色 -->
+    <color name="text_black1">#111111</color>
+    <color name="text_black2">#333333</color>
+    <color name="text_black3">#666666</color>
+    <color name="text_grey_light">#688f8e99</color>
+    <color name="text_light">#fcfcfcfc</color>
 </resources>

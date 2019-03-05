@@ -1,40 +1,69 @@
 package com.fos.sample.api;
 
-
+import android.app.Activity;
 import android.app.Application;
+import android.content.Context;
+import android.os.Bundle;
 
-import com.iflytek.cloud.SpeechConstant;
-import com.iflytek.cloud.SpeechUtility;
+import com.fos.fosmvp.common.base.BaseApplication;
+import com.fos.fosmvp.common.utils.LogUtils;
 
 /**
- * APPLICATION
+ * Created by mmh on 2018/7/17.
  */
-public class AppApplication extends Application {
+public class AppApplication extends BaseApplication implements Application.ActivityLifecycleCallbacks {
     private static AppApplication appApplication;
-    public static String PACKAGE_NAME;
 
     @Override
     public void onCreate() {
         super.onCreate();
         appApplication = this;
-        PACKAGE_NAME = getPackageName();
-        init();
+        AppConstants.init();
+        LogUtils.e("---------------start fosmvp----------------"+ appApplication);
     }
 
-
-
-    private void init() {
-        SpeechUtility.createUtility(appApplication, SpeechConstant.APPID +"=5bab1996");
-    }
-
-    public AppApplication() {
-        super();
-    }
-
-    public static AppApplication self(){
+    public static Context getAppContext() {
         return appApplication;
     }
 
+    @Override
+    public void onTerminate() {
+        super.onTerminate();
+    }
 
 
+    @Override
+    public void onActivityCreated(Activity activity, Bundle savedInstanceState) {
+
+    }
+
+    @Override
+    public void onActivityStarted(Activity activity) {
+
+    }
+
+    @Override
+    public void onActivityResumed(Activity activity) {
+
+    }
+
+    @Override
+    public void onActivityPaused(Activity activity) {
+
+    }
+
+    @Override
+    public void onActivityStopped(Activity activity) {
+
+    }
+
+    @Override
+    public void onActivitySaveInstanceState(Activity activity, Bundle outState) {
+
+    }
+
+    @Override
+    public void onActivityDestroyed(Activity activity) {
+
+    }
 }
