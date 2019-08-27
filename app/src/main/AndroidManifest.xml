@@ -55,6 +55,24 @@
             </intent-filter>
         </activity>
 
+        <!-- 图片选取 -->
+        <activity
+            android:name="com.little.picture.PicturePickActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            />
+        <!-- 7.0拍照 start -->
+        <provider
+            android:name=".view.CustomFileProvider"
+            android:authorities="com.fos.scan.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+        <!-- 7.0拍照 end -->
 
     </application>
 

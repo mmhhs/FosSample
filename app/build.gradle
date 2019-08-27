@@ -75,9 +75,11 @@ repositories {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'com.fos:fosmvp:1.1.1'
+    compile 'com.fos:fosmvp:1.1.17'
+    //项目框架
+    compile 'com.little:picture:1.1.22'
+    //图片框架
     compile 'com.android.support.constraint:constraint-layout:1.1.0'
-
 
     compile 'com.android.support:multidex:1.0.1'
     compile 'org.greenrobot:eventbus:3.0.0'
